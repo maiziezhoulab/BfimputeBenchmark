@@ -6,9 +6,9 @@
 #' @param npc Number of principal components used for dimension reduction
 #'
 #' @return a list containing adjusted Rand Index, Jaccard Index,
-#' normalized mutual information, and purity score
+#' normalized mutual information, purity score, and silhouette
 #' @export
-#' @import Spectrum stats
+#' @import Spectrum stats cluster
 #' @author Zi-Hang Wen \email{wenzihang0506@gmail.com}
 #'
 #' @examples
@@ -75,6 +75,12 @@ evaluation_metrics <- function(res, true_label, npc = 2){
   #####-------------------------purity score-------------------------#####
   ps = sum(apply(on_matrix,2,max))/sum(on_matrix)
 
-  return(list(ari = ari, ji = ji, nmi = nmi, ps = ps))
+  #####--------------------------silhouette--------------------------#####
+  counts.dist = dist(t(pc2))
+  counts.sil = silhouette(new_clust, counts.dist)
+  counts.sil.summary = summary(counts.sil)
+  sil.all = list(widths = counts.sil[,3], summary = counts.sil.summary)
+  return(list(ari = ari, ji = ji, nmi = nmi, ps = ps, silhouette = sil.all))
   #return(c(ari,ji,nmi,ps))
 }
+
