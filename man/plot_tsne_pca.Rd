@@ -16,7 +16,7 @@ columns corresponding to cells.}
 you want to paint the dots.}
 }
 \value{
-a list containing PCA plot and t-SNE plot
+a list containing PCA plot and t-SNE plot (both are ggplot2 objects)
 }
 \description{
 Title Scatter plot using t-SNE and first two PCs from PCA

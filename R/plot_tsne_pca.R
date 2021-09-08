@@ -6,7 +6,7 @@
 #' @param cell_type Cell_type of the rows of \code{res}, aka the colour with which
 #' you want to paint the dots.
 #'
-#' @return a list containing PCA plot and t-SNE plot
+#' @return a list containing PCA plot and t-SNE plot (both are ggplot2 objects)
 #' @export
 #' @import SingleCellExperiment scater ggplot2 cowplot gridExtra ggthemes
 #' @author Zi-Hang Wen \email{wenzihang0506@gmail.com}
