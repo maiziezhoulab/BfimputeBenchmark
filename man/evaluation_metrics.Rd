@@ -2,12 +2,12 @@
 % Please edit documentation in R/evaluation_metrics.R
 \name{evaluation_metrics}
 \alias{evaluation_metrics}
-\title{Title Four types of evaluation metrics}
+\title{Four types of evaluation metrics}
 \usage{
-evaluation_metrics(res, true_label, npc = 2)
+evaluation_metrics(ematrix, true_label, npc = 2)
 }
 \arguments{
-\item{res}{counts Expression count matrix with rows corresponding to genes and
+\item{ematrix}{Expression matrix with rows corresponding to genes and
 columns corresponding to cells.}
 
 \item{true_label}{True cell labels}
@@ -19,7 +19,10 @@ a list containing adjusted Rand Index, Jaccard Index,
 normalized mutual information, purity score, and silhouette
 }
 \description{
-Title Four types of evaluation metrics
+Four types of evaluation metrics
+}
+\examples{
+
 }
 \author{
 Zi-Hang Wen \email{wenzihang0506@gmail.com}

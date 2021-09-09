@@ -1,9 +1,9 @@
-#' Title Scatter plot using t-SNE and first two PCs from PCA
+#' Scatter plot using t-SNE and first two PCs from PCA
 #'
-#' @param res counts Expression count matrix with rows corresponding to genes and
+#' @param ematrix Expression matrix with rows corresponding to genes and
 #' columns corresponding to cells.
 #' @param name Title of the plot.
-#' @param cell_type Cell_type of the rows of \code{res}, aka the colour with which
+#' @param cell_type Cell_type of the rows of \code{ematrix}, aka the colour with which
 #' you want to paint the dots.
 #'
 #' @return a list containing PCA plot and t-SNE plot (both are ggplot2 objects)
@@ -12,7 +12,9 @@
 #' @author Zi-Hang Wen \email{wenzihang0506@gmail.com}
 #'
 #' @examples
-plot_tsne_pca <- function(res, name, cell_type){
+#'
+plot_tsne_pca <- function(ematrix, name, cell_type){
+  res = ematrix
   colnames(res) <- NULL
   rownames(res) <- NULL
   res <- SingleCellExperiment(
@@ -43,5 +45,5 @@ plot_tsne_pca <- function(res, name, cell_type){
           legend.title=element_blank())
   # + scale_color_brewer(palette = "Paired")
 
-  return(list(p,t))
+  return(list(p.pca = p,p.tsne = t))
 }

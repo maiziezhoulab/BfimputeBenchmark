@@ -1,10 +1,12 @@
-#' Title Calculate Pearson Correlation between cells from the same cell type and
+#' Pearson Correlation and standard deviation
+#'
+#' Calculate Pearson Correlation between cells from the same cell type and
 #' from different cell type. Also calculate the standard deviation
 #'
-#' @param res Expression count matrix with rows corresponding to genes and
+#' @param ematrix Expression matrix with rows corresponding to genes and
 #' columns corresponding to cells.
 #' @param cell_type A vector of cell types with each element representing a cell
-#' type for the cell in the corresponding position in \code{res}
+#' type for the cell in the corresponding position in \code{ematrix}
 #'
 #' @return a list containing two vectors: Pearson scores and their std (the
 #' order is same cell type and diff cell type)
@@ -13,8 +15,9 @@
 #' @author Zi-Hang Wen \email{wenzihang0506@gmail.com}
 #'
 #' @examples
-PearsonStd <- function(res, cell_type){
-  pearson_all = cor(res)
+#'
+PearsonStd <- function(ematrix, cell_type){
+  pearson_all = cor(ematrix)
 
   pearson = c()
   pearson[1] = mean(sapply(cell_index.C, function(j){

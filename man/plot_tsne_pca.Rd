@@ -2,24 +2,27 @@
 % Please edit documentation in R/plot_tsne_pca.R
 \name{plot_tsne_pca}
 \alias{plot_tsne_pca}
-\title{Title Scatter plot using t-SNE and first two PCs from PCA}
+\title{Scatter plot using t-SNE and first two PCs from PCA}
 \usage{
-plot_tsne_pca(res, name, cell_type)
+plot_tsne_pca(ematrix, name, cell_type)
 }
 \arguments{
-\item{res}{counts Expression count matrix with rows corresponding to genes and
+\item{ematrix}{Expression matrix with rows corresponding to genes and
 columns corresponding to cells.}
 
 \item{name}{Title of the plot.}
 
-\item{cell_type}{Cell_type of the rows of \code{res}, aka the colour with which
+\item{cell_type}{Cell_type of the rows of \code{ematrix}, aka the colour with which
 you want to paint the dots.}
 }
 \value{
 a list containing PCA plot and t-SNE plot (both are ggplot2 objects)
 }
 \description{
-Title Scatter plot using t-SNE and first two PCs from PCA
+Scatter plot using t-SNE and first two PCs from PCA
+}
+\examples{
+
 }
 \author{
 Zi-Hang Wen \email{wenzihang0506@gmail.com}

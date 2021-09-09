@@ -1,6 +1,6 @@
-#' Title Four types of evaluation metrics
+#' Four types of evaluation metrics
 #'
-#' @param res counts Expression count matrix with rows corresponding to genes and
+#' @param ematrix Expression matrix with rows corresponding to genes and
 #' columns corresponding to cells.
 #' @param true_label True cell labels
 #' @param npc Number of principal components used for dimension reduction
@@ -12,11 +12,12 @@
 #' @author Zi-Hang Wen \email{wenzihang0506@gmail.com}
 #'
 #' @examples
-evaluation_metrics <- function(res, true_label, npc = 2){
+#'
+evaluation_metrics <- function(ematrix, true_label, npc = 2){
   old_clust = true_label
   Kcluster = sum(!is.na(unique(old_clust)))
   set.seed(Kcluster)
-  pca = prcomp(t(log10(res+1)))
+  pca = prcomp(t(log10(ematrix+1)))
   pc2 = t(pca$x[,1:npc])
   spec_res = Spectrum(pc2,method=3,maxk=10,fixk=Kcluster)
   new_clust = spec_res$assignments
