@@ -7,9 +7,9 @@ The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/Bf
 Questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
 
-### sessionInfo()
+## Session Information
 <details>
-<summary> </summary>
+<summary><code>utils::sessionInfo()</code></summary>
 ```
 R version 3.6.1 (2019-07-05)
 Platform: x86_64-pc-linux-gnu (64-bit)
