@@ -6,6 +6,61 @@ The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/Bf
 
 Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
+## Attached Packages
+Splatter can be installed using:
+```R
+BiocManage::install("splatter")
+```
+
+scater can be installed using:
+```R
+BiocManage::install("scater")
+```
+
+Spectrum can be installed using:
+```R
+install.packages("Spectrum")
+```
+
+DESeq2 can be installed using:
+http://bioconductor.org/packages/DESeq2/
+
+Monocle can be installed using:
+```R
+devtools::install_github("cole-trapnell-lab/monocle-release")
+```
+
+TSCAN can be installed using:
+```R
+devtools::install_github("zji90/TSCAN")
+```
+
+WGCNA can be installed using:
+```R
+install.packages("WGCNA")
+```
+
+org.Hs.eg.db can be installed using:
+```R
+BiocManager::install("org.Hs.eg.db")
+```
+
+clusterProfiler can be installed using:
+```R
+BiocManage::install("clusterProfiler")
+```
+
+TSCAN can be installed using:
+```R
+devtools::install_github("zji90/TSCAN")
+```
+
+scDatasets can be installed using:
+```R
+devtools::install_github("gongx030/scDatasets")
+```
+
+
 
 ## Session Info
 <details>
