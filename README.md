@@ -7,7 +7,7 @@ The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/Bf
 Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
 
-## Session Information
+## Session Info
 <details>
 <summary><code>utils::sessionInfo()</code></summary>
 <pre>
