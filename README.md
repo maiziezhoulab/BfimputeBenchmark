@@ -9,12 +9,12 @@ Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 ## Attached Packages
 Splatter can be installed using:
 ```R
-BiocManage::install("splatter")
+BiocManager::install("splatter")
 ```
 
 scater can be installed using:
 ```R
-BiocManage::install("scater")
+BiocManager::install("scater")
 ```
 
 Spectrum can be installed using:
@@ -23,7 +23,9 @@ install.packages("Spectrum")
 ```
 
 DESeq2 can be installed using:
-http://bioconductor.org/packages/DESeq2/
+```R
+BiocManager::install("DESeq2")
+```
 
 Monocle can be installed using:
 ```R
@@ -47,7 +49,7 @@ BiocManager::install("org.Hs.eg.db")
 
 clusterProfiler can be installed using:
 ```R
-BiocManage::install("clusterProfiler")
+BiocManager::install("clusterProfiler")
 ```
 
 TSCAN can be installed using:
