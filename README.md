@@ -10,7 +10,7 @@ Questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 ## Session Information
 <details>
 <summary><code>utils::sessionInfo()</code></summary>
-```
+<pre>
 R version 3.6.1 (2019-07-05)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: CentOS Linux 7 (Core)
@@ -104,5 +104,5 @@ loaded via a namespace (and not attached):
 [154] fastICA_1.2-2            munsell_0.5.0            DO.db_2.9               
 [157] GenomeInfoDbData_1.2.2   iterators_1.0.13         impute_1.60.0           
 [160] haven_2.4.3              reshape2_1.4.4           gtable_0.3.0            
-```
+</pre>
 </details>
