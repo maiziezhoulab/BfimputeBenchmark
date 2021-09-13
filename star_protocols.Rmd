@@ -22,8 +22,8 @@ If imputation is all you need, you can skip the following installation steps.
 `BfimputePaper` is a software integrating scRNA-seq analysis used for paper
 [Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). So the attached functions used
 in this package may have different names or parameters from their other
-versions. So to avoid errors, it will be a good choice to install the following
-packages manually before installing `BfimputePaper`:
+versions. In order to avoid errors, it will be a good choice to install the
+following packages manually before installing `BfimputePaper`:
 
 ```R
 # Splatter

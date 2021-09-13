@@ -7,6 +7,12 @@ The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/Bf
 Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
 ## Attached Packages
+`BfimputePaper` is a software integrating scRNA-seq analysis used for paper
+[Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). So the attached functions used
+in this package may have different names or parameters from their other
+versions. In order to avoid errors, it will be a good choice to install the
+following packages manually before installing `BfimputePaper`:
+
 Splatter can be installed using:
 ```R
 BiocManager::install("splatter")
