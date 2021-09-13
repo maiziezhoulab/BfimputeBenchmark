@@ -8,12 +8,11 @@ Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
 ## Attached Packages
 `BfimputePaper` is a software integrating scRNA-seq analysis used for paper
-[Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). So the attached functions used
-in this package may have different names or parameters from their other
-versions. In order to avoid errors, it will be a good choice to install the
-following packages manually before installing `BfimputePaper`. Also, some
-packages we use are only published in github which can not be installed
-automatically:
+[Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). Some packages we used are only
+published in github and some attached functions used in this package may have
+different names or parameters from their other versions. In order to
+avoid errors, please install the following packages before installing
+`BfimputePaper` and check the `sessioninfo()` if some functions do not workout:
 
 ```R
 # Splatter
