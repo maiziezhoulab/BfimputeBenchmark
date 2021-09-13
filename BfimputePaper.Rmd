@@ -7,24 +7,13 @@ output:
     df_print: paged
     toc: true
     toc_float: true
-vignette: >
-  %\VignetteIndexEntry{BfimputePaper}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
 
 # Before You Begin
 ## Download the packages
 `Bfimpute` is a Bayesian matrix factorization imputation method. You can
 download it by running:
-```R
+```{r, eval = FALSE}
 devtools::install_github("maiziezhoulab/Bfimpute")
 ```
 If imputation is all you need, you can skip the following installation steps.
@@ -36,7 +25,7 @@ different names or parameters from their other versions. In order to
 avoid errors, please install the following packages before installing
 `BfimputePaper` and check the `sessioninfo()` if some functions do not workout:
 
-```R
+```{r, eval = FALSE}
 # Splatter
 BiocManager::install("splatter")
 # scater
@@ -62,6 +51,6 @@ devtools::install_github("gongx030/scDatasets")
 ```
 
 Then install `BfimputePaper` with:
-```R
+```{r, eval = FALSE}
 devtools::install_github("maiziezhoulab/BfimputePaper")
 ```
