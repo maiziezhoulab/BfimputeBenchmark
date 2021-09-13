@@ -4,9 +4,11 @@ paper Bfimpute。
 
 The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/BfimputePaper).
 
+Please see BfimputePaper.Rmd and BfimputePaper.html for more details.
+
 Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
-## Attached Packages
+## Installation
 `BfimputePaper` is a software integrating scRNA-seq analysis used for paper
 [Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). Some packages we used are only
 published in github and some attached functions used in this package may have
