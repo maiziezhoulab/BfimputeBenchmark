@@ -7,6 +7,10 @@ output:
     df_print: paged
     toc: true
     toc_float: true
+vignette: >
+  %\VignetteIndexEntry{Vignette for 'Protocols for scRNA-seq data Imputation and benchmark with Bfimpute and BfimputePaper'}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 
