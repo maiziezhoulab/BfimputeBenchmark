@@ -1,5 +1,5 @@
 ---
-title: "Vignette for 'Protocols for scRNA-seq data Imputation and benchmark with Bfimpute and BfimputePaper'"
+title: "BfimputePaper"
 author: "Zi-Hang Wen"
 date: "`r Sys.Date()`"
 output:
@@ -8,7 +8,7 @@ output:
     toc: true
     toc_float: true
 vignette: >
-  %\VignetteIndexEntry{Vignette for 'Protocols for scRNA-seq data Imputation and benchmark with Bfimpute and BfimputePaper'}
+  %\VignetteIndexEntry{BfimputePaper}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
