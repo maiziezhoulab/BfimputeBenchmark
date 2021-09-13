@@ -23,7 +23,9 @@ If imputation is all you need, you can skip the following installation steps.
 [Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). So the attached functions used
 in this package may have different names or parameters from their other
 versions. In order to avoid errors, it will be a good choice to install the
-following packages manually before installing `BfimputePaper`:
+following packages manually before installing `BfimputePaper`. Also, some
+packages we use are only published in github which can not be installed
+automatically:
 
 ```R
 # Splatter

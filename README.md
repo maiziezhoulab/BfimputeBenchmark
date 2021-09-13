@@ -11,60 +11,32 @@ Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 [Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). So the attached functions used
 in this package may have different names or parameters from their other
 versions. In order to avoid errors, it will be a good choice to install the
-following packages manually before installing `BfimputePaper`:
+following packages manually before installing `BfimputePaper`. Also, some
+packages we use are only published in github which can not be installed
+automatically:
 
-Splatter can be installed using:
 ```R
+# Splatter
 BiocManager::install("splatter")
-```
-
-scater can be installed using:
-```R
+# scater
 BiocManager::install("scater")
-```
-
-Spectrum can be installed using:
-```R
+# Spectrum
 install.packages("Spectrum")
-```
-
-DESeq2 can be installed using:
-```R
+# DESeq2
 BiocManager::install("DESeq2")
-```
-
-Monocle can be installed using:
-```R
+# Monocle
 devtools::install_github("cole-trapnell-lab/monocle-release")
-```
-
-TSCAN can be installed using:
-```R
+# TSCAN
 devtools::install_github("zji90/TSCAN")
-```
-
-WGCNA can be installed using:
-```R
+# WGCNA
 install.packages("WGCNA")
-```
-
-org.Hs.eg.db can be installed using:
-```R
+# org.Hs.eg.db
 BiocManager::install("org.Hs.eg.db")
-```
-
-clusterProfiler can be installed using:
-```R
+# clusterProfiler
 BiocManager::install("clusterProfiler")
-```
-
-TSCAN can be installed using:
-```R
+# TSCAN
 devtools::install_github("zji90/TSCAN")
-```
-
-scDatasets can be installed using:
-```R
+# scDatasets
 devtools::install_github("gongx030/scDatasets")
 ```
 
