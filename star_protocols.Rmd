@@ -1,0 +1,56 @@
+---
+title: "Vignette for 'Protocols for scRNA-seq data Imputation and benchmark with Bfimpute and BfimputePaper'"
+author: "Zi-Hang Wen"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: true
+---
+
+
+# Before You Begin
+## Download the packages
+`Bfimpute` is a Bayesian matrix factorization imputation method. You can
+download it by running:
+```R
+devtools::install_github("maiziezhoulab/Bfimpute")
+```
+If imputation is all you need, you can skip the following installation steps.
+
+`BfimputePaper` is a software integrating scRNA-seq analysis used for paper
+[Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). So the attached functions used
+in this package may have different names or parameters from their other
+versions. So to avoid errors, it will be a good choice to install the following
+packages manually before installing `BfimputePaper`:
+
+```R
+# Splatter
+BiocManager::install("splatter")
+# scater
+BiocManager::install("scater")
+# Spectrum
+install.packages("Spectrum")
+# DESeq2
+BiocManager::install("DESeq2")
+# Monocle
+devtools::install_github("cole-trapnell-lab/monocle-release")
+# TSCAN
+devtools::install_github("zji90/TSCAN")
+# WGCNA
+install.packages("WGCNA")
+# org.Hs.eg.db
+BiocManager::install("org.Hs.eg.db")
+# clusterProfiler
+BiocManager::install("clusterProfiler")
+# TSCAN
+devtools::install_github("zji90/TSCAN")
+# scDatasets
+devtools::install_github("gongx030/scDatasets")
+```
+
+Then install `BfimputePaper` with:
+```R
+devtools::install_github("maiziezhoulab/BfimputePaper")
+```
