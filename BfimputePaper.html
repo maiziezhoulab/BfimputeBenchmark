@@ -11,7 +11,7 @@
 
 <meta name="author" content="Zi-Hang Wen" />
 
-<meta name="date" content="2021-09-13" />
+<meta name="date" content="2021-09-14" />
 
 <title>BfimputePaper</title>
 
@@ -2793,15 +2793,15 @@ div.tocify {
 
 <h1 class="title toc-ignore">BfimputePaper</h1>
 <h4 class="author">Zi-Hang Wen</h4>
-<h4 class="date">2021-09-13</h4>
+<h4 class="date">2021-09-14</h4>
 
 </div>
 
 
 <div id="before-you-begin" class="section level1">
 <h1>Before You Begin</h1>
-<div id="download-the-packages" class="section level2">
-<h2>Download the packages</h2>
+<div id="prepare-the-packages" class="section level2">
+<h2>Prepare the packages</h2>
 <p><code>Bfimpute</code> is a Bayesian matrix factorization imputation method. You can download it by running:</p>
 <pre class="r"><code>devtools::install_github(&quot;maiziezhoulab/Bfimpute&quot;)</code></pre>
 <p>If imputation is all you need, you can skip the following installation steps.</p>
@@ -2831,6 +2831,14 @@ devtools::install_github(&quot;gongx030/scDatasets&quot;)</code></pre>
 <p>Then install <code>BfimputePaper</code> with:</p>
 <pre class="r"><code>devtools::install_github(&quot;maiziezhoulab/BfimputePaper&quot;)</code></pre>
 </div>
+<div id="prepare-the-data" class="section level2">
+<h2>Prepare the data</h2>
+<p>In this protocol, we will use the data from Gene Expression Omnibus (GEO) Database with GEO Series accession number GSE75748. So, download the ‘GSE75748_sc_time_course_ec.csv.gz’ and ‘GSE75748_bulk_time_course_ec.csv.gz’ from <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75748">here</a> and unzip them.</p>
+<p>If you want to use your own scRNA-seq data, you can conduct alignment and generate the count matrix with genes as the rows and cells as the columns.</p>
+</div>
+</div>
+<div id="main-protocol" class="section level1">
+<h1>Main Protocol</h1>
 </div>
 
 
