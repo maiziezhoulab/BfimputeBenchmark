@@ -4,7 +4,7 @@ paper Bfimpute。
 
 The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/BfimputeBenchmark).
 
-Please see BfimputeBenchmark.Rmd and BfimputeBenchmark.html for more details.
+Please see [BfimputeBenchmark.Rmd](https://github.com/maiziezhoulab/BfimputeBenchmark/blob/master/BfimputeBenchmark.Rmd) and [BfimputeBenchmark.html](https://github.com/maiziezhoulab/BfimputeBenchmark/blob/master/BfimputeBenchmark.html) for more details.
 
 Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
