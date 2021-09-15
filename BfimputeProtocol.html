@@ -2800,6 +2800,71 @@ div.tocify {
 
 <div id="before-you-begin" class="section level1">
 <h1>Before You Begin</h1>
+<div id="prepare-the-expression-matrix" class="section level2">
+<h2>Prepare the expression matrix</h2>
+<p>If you already have the the scRNA-seq expression matrix with genes as the rows and cells as the columns, you can skip this section.</p>
+<p>We hereby give an example on how to generate the expression matrix from a human embryonic stem cell study (GEO: GSE75748). In this protocol, we will use the time course data from 00h to 96h on both single cells and bulk samples. The SRR number lists are stored in folder <code>SRRlist</code>. To use this protocol on your own experiment, you can generate your files similarly. For convenience, we also put the R script <code>creat_matrix.R</code> for cell counts merging and quality control which will be used in future steps.</p>
+<p>Firstly, create an empty folder <code>raw_data</code> as the workspace and put folder <code>SRRlist</code> in that workspace.</p>
+<pre class="bash"><code>mkdir raw_data
+mv SRRlist raw_data
+cd raw_data</code></pre>
+<div id="alignment" class="section level3">
+<h3>Alignment</h3>
+<p>Download HISAT2 and its index from <a href="http://daehwankimlab.github.io/hisat2/download/">here</a>. Then perform alignment for each stage one by one or simultaneously using HISAT2.</p>
+<pre class="bash"><code>name=&quot;sc00h&quot;    # sc12h sc24h sc36h sc72h sc96h bulk12h bulk24h bulk36h bulk72h bulk96h
+file=SRRlist/&quot;$name&quot;.txt
+sampath=sam_&quot;$name&quot;/
+
+mkdir $sampath
+
+while read line; do
+    echo $line
+    YOUE_HISAT2_PATH/hisat2 -t \
+        -x YOUR_INDEX_PATH/genome \
+        --sra-acc $line \
+        -S &quot;$sampath&quot;/&quot;$line&quot;_GRCh37.sam
+done &lt; $file</code></pre>
+</div>
+<div id="sort" class="section level3">
+<h3>Sort</h3>
+<p>Dowload and install SAMtools from <a href="http://www.htslib.org/download/">here</a>. Then transform the sam files to bam files, sort the alignments, and create index using SAMtools.</p>
+<pre class="bash"><code>name=&quot;sc00h&quot;    # sc12h sc24h sc36h sc72h sc96h bulk12h bulk24h bulk36h bulk72h bulk96h
+
+file=SRRlist/&quot;$name&quot;.txt
+sampath=sam_&quot;$name&quot;/
+bampath=bam_&quot;$name&quot;/
+
+mkdir $bampath
+mkdir temp
+
+while read line; do
+    echo $line
+    samtools view -bS &quot;$sampath&quot;/&quot;$line&quot;_GRCh37.sam | \
+        samtools sort -T temp/$line \
+        -o &quot;$bampath&quot;/&quot;$line&quot;_GRCh37.bam
+    samtools index &quot;$bampath&quot;/&quot;$line&quot;_GRCh37.bam
+done &lt; $file</code></pre>
+</div>
+<div id="count" class="section level3">
+<h3>Count</h3>
+<p>Download and install HTSeq from <a href="https://htseq.readthedocs.io/en/master/install.html">here</a>. Download the GTF file from <a href="http://ftp.ensembl.org/pub/release-104/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz">here</a></p>
+<pre class="bash"><code>name=&quot;sc00h&quot;    # sc12h sc24h sc36h sc72h sc96h bulk12h bulk24h bulk36h bulk72h bulk96h
+
+file=SRRlist/&quot;$name&quot;.txt
+bampath=bam_&quot;$name&quot;/
+countpath=count_&quot;$name&quot;/
+
+mkdir $countpath
+
+while read line; do
+    echo $line
+    htseq-count -s no -r pos -f bam &quot;$bampath&quot;/&quot;$line&quot;_GRCh37.bam YOUR_GTF_PATH/Homo_sapiens.GRCh37.75.gtf &gt; &quot;$countpath&quot;/&quot;$line&quot;_GRCh37.count
+done &lt; $file</code></pre>
+<p>The next step is merge all the individual single cells to a scRNA-seq count matrix and bulk samples to a bulk RNA-seq count matrix. Then perform quality control and align the genes for scRNA-seq count matrix and bulk RNA-seq count matrix.</p>
+<pre class="bash"><code>cd SRRlist
+Rscript create_matrix.R</code></pre>
+</div>
+</div>
 <div id="prepare-the-packages" class="section level2">
 <h2>Prepare the packages</h2>
 <p><code>Bfimpute</code> is a Bayesian matrix factorization imputation method. You can download it by running:</p>
@@ -2830,11 +2895,6 @@ devtools::install_github(&quot;zji90/TSCAN&quot;)
 devtools::install_github(&quot;gongx030/scDatasets&quot;)</code></pre>
 <p>Then install <code>BfimputeProtocol</code> with:</p>
 <pre class="r"><code>devtools::install_github(&quot;maiziezhoulab/BfimputeProtocol&quot;)</code></pre>
-</div>
-<div id="prepare-the-data" class="section level2">
-<h2>Prepare the data</h2>
-<p>In this protocol, we will use the data from Gene Expression Omnibus (GEO) Database with GEO Series accession number GSE75748. So, download the ‘GSE75748_sc_time_course_ec.csv.gz’ and ‘GSE75748_bulk_time_course_ec.csv.gz’ from <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75748">here</a> and unzip them.</p>
-<p>If you want to use your own scRNA-seq data, you can conduct alignment and generate the count matrix with genes as the rows and cells as the columns.</p>
 </div>
 </div>
 <div id="main-protocol" class="section level1">
