@@ -1,5 +1,5 @@
 ---
-title: "BfimputePaper"
+title: "BfimputeBenchmark"
 author: "Zi-Hang Wen"
 date: "`r Sys.Date()`"
 output:
@@ -18,12 +18,12 @@ devtools::install_github("maiziezhoulab/Bfimpute")
 ```
 If imputation is all you need, you can skip the following installation steps.
 
-`BfimputePaper` is a software integrating scRNA-seq analysis used for paper
+`BfimputeBenchmark` is a software integrating scRNA-seq analysis used for paper
 [Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). Some packages we used are only
 published in github and some attached functions used in this package may have
 different names or parameters from their other versions. In order to
 avoid errors, please install the following packages before installing
-`BfimputePaper` and check the `sessioninfo()` if some functions do not workout:
+`BfimputeBenchmark` and check the `sessioninfo()` if some functions do not workout:
 
 ```{r, eval = FALSE}
 # Splatter
@@ -50,9 +50,9 @@ devtools::install_github("zji90/TSCAN")
 devtools::install_github("gongx030/scDatasets")
 ```
 
-Then install `BfimputePaper` with:
+Then install `BfimputeBenchmark` with:
 ```{r, eval = FALSE}
-devtools::install_github("maiziezhoulab/BfimputePaper")
+devtools::install_github("maiziezhoulab/BfimputeBenchmark")
 ```
 ## Prepare the data
 In this protocol, we will use the data from Gene Expression Omnibus (GEO) 
