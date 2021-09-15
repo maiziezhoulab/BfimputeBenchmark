@@ -1,20 +1,20 @@
-# BfimputeBenchmark
+# BfimputeProtocol
 This package contains the functions that are used to generate the results of
 paper Bfimpute。
 
-The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/BfimputeBenchmark).
+The Bfimpute source code can be found [here](https://github.com/maiziezhoulab/BfimputeProtocol).
 
-Please see [BfimputeBenchmark.Rmd](https://github.com/maiziezhoulab/BfimputeBenchmark/blob/master/BfimputeBenchmark.Rmd) and [BfimputeBenchmark.html](https://github.com/maiziezhoulab/BfimputeBenchmark/blob/master/BfimputeBenchmark.html) for more details.
+Please see [BfimputeProtocol.Rmd](https://github.com/maiziezhoulab/BfimputeProtocol/blob/master/BfimputeProtocol.Rmd) and [BfimputeProtocol.html](https://github.com/maiziezhoulab/BfimputeProtocol/blob/master/BfimputeProtocol.html) for more details.
 
 Any questions about the paper or scripts can be sent to wenzihang0506@gmail.com.
 
 ## Installation
-`BfimputeBenchmark` is a software integrating scRNA-seq analysis used for paper
+`BfimputeProtocol` is a software integrating scRNA-seq analysis used for paper
 [Bfimpute: A Bayesian factorization method to recover single-cell RNA sequencing data](https://doi.org/10.1101/2021.02.10.430649). Some packages we used are only
 published in github and some attached functions used in this package may have
 different names or parameters from their other versions. In order to
 avoid errors, please install the following packages before installing
-`BfimputeBenchmark` and check the `sessioninfo()` if some functions do not workout:
+`BfimputeProtocol` and check the `sessioninfo()` if some functions do not workout:
 
 ```R
 # Splatter
