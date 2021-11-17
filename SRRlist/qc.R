@@ -82,9 +82,10 @@ gene.inter = intersect(rownames(sc.SI), rownames(bulk.SI))
 sc.SI = sc.SI[gene.inter, ]
 bulk.SI = bulk.SI[gene.inter, ]
 
+
+dir.create(file.path("../time_new/"), recursive = TRUE)
 # write.csv(sc.SI, "./time_new/time_new_SI_qc.csv")
 # write.csv(bulk.SI, "./time_new/time_new_bulk_SI_qc.csv")
-dir.create(file.path("../time_new/"), recursive = TRUE)
 saveRDS(sc.SI, "../time_new/time_new_SI_qc.rds")
 saveRDS(bulk.SI, "../time_new/time_new_bulk_SI_qc.rds")
 

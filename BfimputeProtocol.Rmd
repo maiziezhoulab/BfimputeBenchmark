@@ -17,7 +17,7 @@ and cells as the columns, you can skip this section.
 We hereby give an example on how to generate the expression matrix from a human
 embryonic stem cell study (GEO: GSE75748). In this protocol, we will use the
 time course data from 00h to 96h on both single cells and bulk samples. The
-SRR number lists are stored in folder `SRRlist`. To use this protocol on your
+SRA accession numbers lists are stored in folder `SRRlist`. To use this protocol on your
 own experiment, you can generate your files similarly. For convenience, we also
 put the R script `creat_matrix.R` for cell counts merging and quality control
 which will be used in future steps.
