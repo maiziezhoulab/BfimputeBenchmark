@@ -43,7 +43,7 @@ mkdir $sampath
 
 while read line; do
     echo $line
-    YOUE_HISAT2_PATH/hisat2 -t \
+    YOUR_HISAT2_PATH/hisat2 -t \
         -x YOUR_INDEX_PATH/genome \
         --sra-acc $line \
         -S "$sampath"/"$line"_GRCh37.sam
